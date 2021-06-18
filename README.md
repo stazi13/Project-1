@@ -28,6 +28,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the __authorized___ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _TODO: Add whitelisted IP addresses_
+
 My public IP: 24.13.179.174
 Jump Box 20.80.32.214
 
