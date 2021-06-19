@@ -45,7 +45,6 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the __authorized___ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 My public IP: 24.13.179.174
-Jump Box 20.80.32.214
 
 
 Machines within the network can only be accessed by _the jump box____.
@@ -94,7 +93,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the __.yml___ file to __/etc/ansible directory___.
-- Update the __hosts___ file to include...the chosen VMs (Web 1 and Web 2). 
+- Update the __/etc/ansible/hosts___ file to include...the chosen VMs (Web 1 and Web 2). 
 - Run the playbook, and navigate to __the Kibana url (http://20.102.64.93:5601/app/kibana#/home)__ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
