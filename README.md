@@ -5,11 +5,11 @@ Process of ELK VM build during NU Cybersecurity Bootcamp 2021
 
 The files in this repository were used to configure the network depicted below.
 
-![Diagram](https://github.com/stazi13/Project-1/blob/main/DiagramAzure.png?raw=true "Diagram")
+![Diagram](https://github.com/stazi13/Project-1/blob/main/Diagram/DiagramAzure.png?raw=true "Diagram")
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the __playbook___ file may be used to install only certain pieces of it, such as Filebeat.
 
-[ELK Playbook](https://github.com/stazi13/Project-1/blob/main/ELKplaybook.txt?raw=true "ELK Playbook")
+[ELK Playbook](https://github.com/stazi13/Project-1/blob/main/Ansible/ELKplaybook.txt?raw=true "ELK Playbook")
 
 This document contains the following details:
 - Description of the Topology
@@ -74,7 +74,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Docker ps](https://github.com/stazi13/Project-1/blob/main/9DockeronELK.png?raw=true "Docker ps")
+![Docker ps](https://github.com/stazi13/Project-1/blob/main/Images/9DockeronELK.png?raw=true "Docker ps")
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -97,6 +97,6 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to __the Kibana url (http://20.102.64.93:5601/app/kibana#/home)__ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_ ___[Metricbeat Playbook](https://github.com/stazi13/Project-1/blob/main/MetricBeatPlaybook.png?raw=true "Metricbeat Playbook") and [Filebeat Playbook](https://github.com/stazi13/Project-1/blob/main/FileBeatPlaybook.png?raw=true "Filebeat Playbook") copied to /etc/ansible/roles directory ___
+- _Which file is the playbook? Where do you copy it?_ ___[Metricbeat Playbook](https://github.com/stazi13/Project-1/blob/main/Ansible/MetricBeatPlaybook.png?raw=true "Metricbeat Playbook") and [Filebeat Playbook](https://github.com/stazi13/Project-1/blob/main/Ansible/FilebeatPlaybook.png?raw=true "Filebeat Playbook") copied to /etc/ansible/roles directory ___
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ ___You can make adjustments to the hosts file in the /etc/ansible directory___
 - _Which URL do you navigate to in order to check that the ELK server is running? http://20.102.64.93:5601/app/kibana#/home
