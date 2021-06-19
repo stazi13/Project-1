@@ -96,7 +96,6 @@ SSH into the control node and follow the steps below:
 - Update the __/etc/ansible/hosts___ file to include...the chosen VMs (Web 1 and Web 2). 
 - Run the playbook, and navigate to __the Kibana url (http://20.102.64.93:5601/app/kibana#/home)__ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_ ___[Metricbeat Playbook](https://github.com/stazi13/Project-1/blob/main/Ansible/MetricBeatPlaybook.png?raw=true "Metricbeat Playbook") and [Filebeat Playbook](https://github.com/stazi13/Project-1/blob/main/Ansible/FilebeatPlaybook.png?raw=true "Filebeat Playbook") copied to /etc/ansible/roles directory ___
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ ___You can make adjustments to the hosts file in the /etc/ansible directory___
 - _Which URL do you navigate to in order to check that the ELK server is running? http://20.102.64.93:5601/app/kibana#/home
