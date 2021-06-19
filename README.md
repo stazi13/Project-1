@@ -55,10 +55,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 10.0.0.4             |
-| Web 1    | No                  | 10.0.0.5             |
-| Web 2    | No                  | 10.0.0.6             |
-| ELK VM   | No                  | 10.1.0.4             |
+| Jump Box | Yes                 | 20.80.32.214         |
+| Web 1    | No                  | 20.80.38.98          |
+| Web 2    | No                  | 20.80.38.98          |
+| ELK VM   | No                  | 20.102.64.93         |
 
 ### Elk Configuration
 
@@ -98,8 +98,6 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to __the Kibana url (http://20.102.64.93:5601/app/kibana#/home)__ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_ ___[ELK Playbook](https://github.com/stazi13/Project-1/blob/main/ELKplaybook.txt?raw=true "ELK Playbook") copied to roles directory ___
+- _Which file is the playbook? Where do you copy it?_ ___[Metricbeat Playbook](https://github.com/stazi13/Project-1/blob/main/MetricBeatPlaybook.png?raw=true "Metricbeat Playbook") and [Filebeat Playbook](https://github.com/stazi13/Project-1/blob/main/FileBeatPlaybook.png?raw=true "Filebeat Playbook") copied to roles directory ___
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running? http://20.102.64.93:5601/app/kibana#/home
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
