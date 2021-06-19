@@ -21,8 +21,8 @@ List all the types of downloaded files that have been identified for the last 7 
 gz - An archive file compressed by standard GNU zip; primarily compresses a collection of one or more files and commonly used on Unix operating systems
 zip - a compressed file; generally a collection of one or more files and folders compressed into a single file for easier transportation. 
 css - a cascading style sheet used to format contents of a webpage; generally contains customized, global properties for how to display HTML elements. They can define size, color, font, line spacing, indentation, borders, and location of HTML elements. 
-deb
-rpm
+deb - A Debian Linux Package file commonly used for installation packages that contain software developed for computers that run on Linux using the Debian package management application.
+rpm - a Red Hat Package Manager file used to store and install packages on Linux operating systems. 
 
 
 
@@ -30,34 +30,32 @@ Now that you have a feel for the data, Let's dive a bit deeper. Look at the char
 
 Locate the time frame in the last 7 days with the most amount of bytes (activity).
 In your own words, is there anything that seems potentially strange about this activity?
+Nothing seems out of place. 
 
 
 
 Filter the data by this event.
 
-What is the timestamp for this event?
-What kind of file was downloaded?
-From what country did this activity originate?
-What HTTP response codes were encountered by this visitor?
+What is the timestamp for this event? 06.13.2021 @ 21:00
+What kind of file was downloaded? rpm 
+From what country did this activity originate? India
+What HTTP response codes were encountered by this visitor? 200
 
 
 
 Switch to the Kibana Discover page to see more details about this activity.
 
-What is the source IP address of this activity?
-What are the geo coordinates of this activity?
-What OS was the source machine running?
-What is the full URL that was accessed?
-From what website did the visitor's traffic originate?
+What is the source IP address of this activity? 35.143.166.159
+What are the geo coordinates of this activity? { "lat": 43.34121, "lon": -73.6103075 }
+What OS was the source machine running? Windows 8
+What is the full URL that was accessed? https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.3.2-i686.rpm
+From what website did the visitor's traffic originate? artifacts.elastic.co
 
 
 
 Finish your investigation with a short overview of your insights.
 
-What do you think the user was doing?
-Was the file they downloaded malicious? If not, what is the file used for?
-Is there anything that seems suspicious about this activity?
-Is any of the traffic you inspected potentially outside of compliance guidlines?
-
-
-
+What do you think the user was doing? Downloading a metricbeat file via rpm 
+Was the file they downloaded malicious? If not, what is the file used for? Metricbeat is used to check for metrics from the operating system (such as system CPU, memory and load) and services running on the server such as Apache server.
+Is there anything that seems suspicious about this activity? Not really
+Is any of the traffic you inspected potentially outside of compliance guidlines? Unsure as it is between two foreign countries (India to China)
