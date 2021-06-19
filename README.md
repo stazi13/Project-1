@@ -5,14 +5,14 @@ Process of ELK VM build during NU Cybersecurity Bootcamp 2021
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+![Diagram](https://github.com/stazi13/Project-1/blob/main/DiagramAzure.png?raw=true "Diagram")
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the __playbook___ file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -32,12 +32,12 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 The configuration details of each machine may be found below.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.4   | Linux            |
-| Web 1    |          | 10.0.0.5   | Linux            |
-| Web 2    |          | 10.0.0.6   | Linux            |
-| ELK VM   |          | 10.1.0.4   | Linux            |
+| Name     | Function    | IP Address | Operating System |
+|----------|-------------|------------|------------------|
+| Jump Box | Gateway     | 10.0.0.4   | Linux            |
+| Web 1    | Server      | 10.0.0.5   | Linux            |
+| Web 2    | Server      | 10.0.0.6   | Linux            |
+| ELK VM   | Monitoring  | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
@@ -55,9 +55,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | No                  | 10.0.0.4             |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | 10.0.0.4             |
+| Web 1    | No                  | 10.0.0.5             |
+| Web 2    | No                  | 10.0.0.6             |
+| ELK VM   | No                  | 10.1.0.4             |
 
 ### Elk Configuration
 
