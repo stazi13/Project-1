@@ -1,7 +1,8 @@
 Domain: Network Security
 Question 1:  Faulty Firewall
-####Suppose you have a firewall that's supposed to block SSH connections, but instead lets them through. How would you debug it?
-Make sure each section of your response answers the questions laid out below.####
+
+Suppose you have a firewall that's supposed to block SSH connections, but instead lets them through. How would you debug it?
+Make sure each section of your response answers the questions laid out below.
 
 
 Restate the Problem
@@ -11,26 +12,34 @@ A firewall is allowing any SSH connection to go through instead of only allowing
 Provide a Concrete Example Scenario
 
 In Project 1, did you allow SSH traffic to all of the VMs on your network?
-When setting up my Azure virtual network, I only allowed SSH access into the Jump Box Provisioner Virtual Machine and the Ansible docker container 
-Which VMs did accept SSH connections?
-What happens if you try to connect to a VM that does not accept SSH connections? Why?
-
+When setting up my Azure virtual network, I only allowed SSH access into the Jump Box Provisioner Virtual Machine and the Ansible docker container with two different SSH keys. 
+Which VMs did accept SSH connections? 
+From my personal computer, I ssh to the Jump Box. From the Jump Box, I ssh into either Web 1 or Web 2 Virtual Machines.
+What happens if you try to connect to a VM that does not accept SSH connections? Why? 
+If there is an attempt to SSH into a machine, virtual or otherwise, that does not authorize an SSH pairing, it will not work due to firewall policies. 
 
 
 Explain the Solution Requirements
 
-If one of your Project 1 VMs accepted SSH connections, what would you assume the source of the error is?
-Which general configurations would you double-check?
-What actions would you take to test that your new configurations are effective?
+If one of your Project 1 VMs accepted SSH connections, what would you assume the source of the error is? 
+I would first want to check the Network Security Group's Inbound rules to see which ones are allowing the connections, such as the SSH rule or the 'AllowVnetInBound' rule. 
+Which general configurations would you double-check? 
+I would check the Inbound Rules to see if any of them were set to SSH authorization depending on the IP address that was placed to be authorized.
+What actions would you take to test that your new configurations are effective? 
+After making the necessary adjustments to the rules, I would attempt to SSH from the authorized machine and a non-authorized machine.
 
 
 
 Explain the Solution Details
 
-Which specific panes in the Azure UI would you look at to investigate the problem?
-Which specific configurations and controls would you check?
-What would you look for, specifically?
-How would you attempt to connect to your VMs to test that your fix is effective?
+Which specific panes in the Azure UI would you look at to investigate the problem? 
+Network Security Group
+Which specific configurations and controls would you check? 
+Inbound Security Rules
+What would you look for, specifically? 
+A rule that only allows SSH via an authorized IP or authorized IPs set by the user or the company. I would also require keypairs to be generated and refreshed every 3 months to ensure security. 
+How would you attempt to connect to your VMs to test that your fix is effective? 
+I would use an authorized machine/IP address and a non-authorized machine/IP address to test the connections. 
 
 
 
@@ -38,6 +47,8 @@ Identify Advantages/Disadvantages of the Solution
 
 
 Does your solution guarantee that the Project 1 network is now "immune" to all unauthorized access?
+My solution would guarantee that as long as the keypairs were kept secure, only the authorized users would be able to access the network.
 
 
-What monitoring controls might you add to ensure that you identify any suspicious authentication attempts?​
+What monitoring controls might you add to ensure that you identify any suspicious authentication attempts?
+I would attempt to create an ELK virtual machine to study abnormal behavior via Filebeat and Metricbeat. I would also attempt to enable snort alerts whenever there was a threatening activity. 
